@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: lnd2020 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lnd2020 
+    spec:
+      containers:
+        - name: lnd2020 
+          image: lnd2020acr.azurecr.io/lnd2020
+          ports:
+          - containerPort: 8080
